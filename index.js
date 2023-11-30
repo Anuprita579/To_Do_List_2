@@ -59,7 +59,7 @@ app.post("/delete", function(req,res){
         })
 });
 
-//const PORT = process.env.PORT
-app.listen("4000", function(){
-    console.log("Server Started.");
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Server Started on Port ${PORT}`);
 });
